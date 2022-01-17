@@ -41,13 +41,4 @@ const services = {
 
 };
 
-services.create(
-    "Miranha.jpg",
-    "Homem Aranha: Sem Volta para Casa",
-    10,
-    "http://youy",
-    "Sinopse do filme que dizem que é bom",
-    ["Ação", "Ficção", "Comédia"]
-)
-
 //module.exports = services;
