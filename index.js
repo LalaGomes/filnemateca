@@ -29,8 +29,16 @@ servidor.get('/filmes/:posicao', (req,res) =>{
     res.send(filmes[posicao])
 });
 
-servidor.get('/busca/posicao', (req,res) =>{
-    res.send()
+servidor.get('/busca/:trecho', (req,res) =>{
+    res.send(req.params.trecho)
+    // 1: Salvar o trecho na variável 'trecho';
+
+    // 2: Importar o conteúdo de filmes.json para uma constante 'filmes';
+
+    // 3: Filtrar o array de filmes, somente os filmes que possuam o trecho no título;
+    // (Lembrem da função filmes.filter)
+
+    // 4: Enviar para o cliente (usando res.send) o resultado da filtragem.
 })
 // Por o servidor para 'ouvir' as requisições
 servidor.listen(3000)
