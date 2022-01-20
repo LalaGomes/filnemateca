@@ -21,13 +21,16 @@ servidor.get('/generos', (req,res) =>{
 });
 
 servidor.get('/filmes/:posicao', (req,res) =>{
+    // Capturei a posição do filme desejado
     let posicao = req.params.posicao;
+    // Carregar o array de filmes
     const filmes = require('./database/filmes.json');
+    // Enviar para o cliente o que foi pedido
     res.send(filmes[posicao])
 });
 
-servidor.get('/busca/venom:posicao', (req,res) =>{
-
+servidor.get('/busca/posicao', (req,res) =>{
+    res.send()
 })
 // Por o servidor para 'ouvir' as requisições
 servidor.listen(3000)
