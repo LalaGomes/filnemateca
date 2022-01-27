@@ -40,5 +40,6 @@ servidor.get('/busca/:trecho', (req,res) =>{
 
     // 4: Enviar para o cliente (usando res.send) o resultado da filtragem.
 })
+
 // Por o servidor para 'ouvir' as requisições
 servidor.listen(3000)
