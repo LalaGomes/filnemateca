@@ -15,12 +15,7 @@ const casasPares = numerosDasCasas.filter(ehPar)
 console.log(casasPares);
 
 
-
-
-
 /*
-
-2) Dado o array saldos = [10,100,22,25,34], escreva o comando que retorna o array somente com os múltiplos de 5;
 3) Dado o array nomes = ["Mateus", "Rhuan", "Ryee", "Gustavo"], escreva o comando que retorna um array somente com nomes com mais de 5 caracteres.
 4) Dado o array pessoas = [
 				{
