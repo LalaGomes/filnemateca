@@ -4,4 +4,4 @@
 */
 
 const saldos = [10,100,22,25,34];
-console.log(saldos.filter( s => s % 5 == 0))
+console.log(saldos.filter( s => s % 5 == 0));
