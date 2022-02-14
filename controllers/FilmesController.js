@@ -16,7 +16,8 @@ const FilmesController = {
     buscarPelaPosicao: (req, res) => {
         let posicao = req.params.posicao;
         const filmes = require('../database/filmes.json');
-        res.send(filmes[posicao])
+        // Enviar para o cliente a view com o filme da posição desejada
+        res.render('filme', {filme: filmes[posicao]})
     },
     buscarPorTrecho: (req, res) => {
         let trecho = req.params.trecho;

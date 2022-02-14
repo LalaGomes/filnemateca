@@ -7,6 +7,9 @@ const FilmesRouter = require('./routers/FilmesRouter');
 // Criando um servidor(app)
 const servidor = express();
 
+// Configuração do Template Engine
+servidor.set('view engine','ejs');
+
 // Usando o FilmesRouter
 servidor.use('/', FilmesRouter);
 
