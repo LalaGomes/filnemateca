@@ -11,7 +11,7 @@ router.get('/', FilmesController.index);
 // listarFilmes
 router.get('/filmes', FilmesController.listarFilmes);
 // genero
-router.get('/generos', FilmesController.genero);
+/*router.get('/generos', FilmesController.genero);*/
 // função pelaPosicao
 router.get('/filmes/:posicao', FilmesController.buscarPelaPosicao);
 // buscarPorTrecho

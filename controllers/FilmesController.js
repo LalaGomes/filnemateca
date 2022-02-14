@@ -4,12 +4,15 @@ const FilmesController = {
         res.send('Você está na página inicial!')
     },
     listarFilmes: (req, res) => {
-        console.log("Processando a requisição...")
-        res.send('A página filmes está aberta!')
+        // Importando os filmes
+        const filmes = require('../database/filmes.json')
+
+        // Enviar os fimes para o cliente
+        res.send(filmes);
     },
-    genero: (req, res) => {
+   /* genero: (req, res) => {
         res.send('Página generos tá on!')
-    },
+    },*/
     buscarPelaPosicao: (req, res) => {
         let posicao = req.params.posicao;
         const filmes = require('../database/filmes.json');
