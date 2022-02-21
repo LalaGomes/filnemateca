@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="css/index.css">
     <title>Filnemateca</title>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -23,114 +25,25 @@
         </div>
     </header>
     <main class="container">
-        <article>
-            <img src="/img/03ea8156766457e7.jpg" alt="Encanto">
-            <a href="">
-                <span class="titulo">Encanto</span>
-                <span class="duracao">Duração: 110min</span>
-            </a>
-        </article>
-        <article>
-            <img src="/img/03ea8156766457e7.jpg" alt="Encanto">
-            <a href="">
-                <span class="titulo">007: Sem tempo para morrer</span>
-                <span class="duracao">Duração: 110min</span>
-            </a>
-        </article>
-        <article>
-            <img src="/img/03ea8156766457e7.jpg" alt="Encanto">
-            <a href="">
-                <span class="titulo">Encanto</span>
-                <span class="duracao">Duração: 110min</span>
-            </a>
-        </article>
-        <article>
-            <img src="/img/03ea8156766457e7.jpg" alt="Encanto">
-            <a href="">
-                <span class="titulo">Encanto</span>
-                <span class="duracao">Duração: 110min</span>
-            </a>
-        </article>
-        <article>
-            <img src="/img/03ea8156766457e7.jpg" alt="Encanto">
-            <a href="">
-                <span class="titulo">007: Sem tempo para morrer</span>
-                <span class="duracao">Duração: 110min</span>
-            </a>
-        </article>
-        <article>
-            <img src="/img/03ea8156766457e7.jpg" alt="Encanto">
-            <a href="">
-                <span class="titulo">Encanto</span>
-                <span class="duracao">Duração: 110min</span>
-            </a>
-        </article>
-        <article>
-            <img src="/img/03ea8156766457e7.jpg" alt="Encanto">
-            <a href="">
-                <span class="titulo">Encanto</span>
-                <span class="duracao">Duração: 110min</span>
-            </a>
-        </article>
-        <article>
-            <img src="/img/03ea8156766457e7.jpg" alt="Encanto">
-            <a href="">
-                <span class="titulo">007: Sem tempo para morrer</span>
-                <span class="duracao">Duração: 110min</span>
-            </a>
-        </article>
-        <article>
-            <img src="/img/03ea8156766457e7.jpg" alt="Encanto">
-            <a href="">
-                <span class="titulo">Encanto</span>
-                <span class="duracao">Duração: 110min</span>
-            </a>
-        </article>
-        <article>
-            <img src="/img/03ea8156766457e7.jpg" alt="Encanto">
-            <a href="">
-                <span class="titulo">Encanto</span>
-                <span class="duracao">Duração: 110min</span>
-            </a>
-        </article>
-        <article>
-            <img src="/img/03ea8156766457e7.jpg" alt="Encanto">
-            <a href="">
-                <span class="titulo">007: Sem tempo para morrer</span>
-                <span class="duracao">Duração: 110min</span>
-            </a>
-        </article>
-        <article>
-            <img src="/img/03ea8156766457e7.jpg" alt="Encanto">
-            <a href="">
-                <span class="titulo">Encanto</span>
-                <span class="duracao">Duração: 110min</span>
-            </a>
-        </article>
-        <article>
-            <img src="/img/03ea8156766457e7.jpg" alt="Encanto">
-            <a href="">
-                <span class="titulo">Encanto</span>
-                <span class="duracao">Duração: 110min</span>
-            </a>
-        </article>
-        <article>
-            <img src="/img/03ea8156766457e7.jpg" alt="Encanto">
-            <a href="">
-                <span class="titulo">007: Sem tempo para morrer</span>
-                <span class="duracao">Duração: 110min</span>
-            </a>
-        </article>
-        <article>
-            <img src="/img/03ea8156766457e7.jpg" alt="Encanto">
-            <a href="">
-                <span class="titulo">Encanto</span>
-                <span class="duracao">Duração: 110min</span>
-            </a>
-        </article>
+        <% 
+        for(let i=0; i<filmes.length ; i++ ){ 
+            let f = filmes[i]
+            %>
+            <article>
+                <img src="/img/<%= f.cartaz %>" alt="<%= f.titulo %>">
+                <a href="/filmes/<%= i %>">
+                    <span class="titulo">
+                        <%= f.titulo %>
+                    </span>
+                    <span class="censura">Censura: <%= f.censura==0 ? 'livre' : f.censura %> anos</span>
+                </a>
+            </article>
+            <% } %>
+
     </main>
     <footer>
 
     </footer>
 </body>
+
 </html>

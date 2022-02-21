@@ -13,9 +13,6 @@ const FilmesController = {
         // Enviar os fimes para o cliente
         res.send(filmes);
     },
-   /* genero: (req, res) => {
-        res.send('Página generos tá on!')
-    },*/
     buscarPelaPosicao: (req, res) => {
         let posicao = req.params.posicao;
         const filmes = require('../database/filmes.json');

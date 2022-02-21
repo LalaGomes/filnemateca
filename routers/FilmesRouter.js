@@ -9,7 +9,7 @@ const FilmesController = require('../controllers/FilmesController');
 
 router.get('/', FilmesController.index);
 // listarFilmes
-router.get('/filmes', FilmesController.listarFilmes);
+//router.get('/filmes', FilmesController.listarFilmes);
 // genero
 /*router.get('/generos', FilmesController.genero);*/
 // função pelaPosicao
