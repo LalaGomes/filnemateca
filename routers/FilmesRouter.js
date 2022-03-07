@@ -15,7 +15,7 @@ router.get('/', FilmesController.index);
 // função pelaPosicao
 router.get('/filmes/:posicao', FilmesController.buscarPelaPosicao);
 // buscarPorTrecho
-router.get('/busca/:trecho', FilmesController.buscarPorTrecho);
+router.get('/busca', FilmesController.buscarPorTrecho);
 // buscarPorId
 router.get('/buscaporid/:id', FilmesController.buscarPorId);
 // buscarPorGenero
