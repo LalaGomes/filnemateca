@@ -13,7 +13,7 @@ router.get('/', FilmesController.index);
 // genero
 /*router.get('/generos', FilmesController.genero);*/
 // função pelaPosicao
-router.get('/filmes/:posicao', FilmesController.buscarPelaPosicao);
+router.get('/filmes/:id', FilmesController.buscarPorId);
 // buscarPorTrecho
 router.get('/busca', FilmesController.buscarPorTrecho);
 // buscarPorId

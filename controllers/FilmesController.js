@@ -29,7 +29,28 @@ const FilmesController = {
         let resultadoDaBusca = filmes.filter(filtradora);
         res.render('index.ejs', {filmes: resultadoDaBusca});
     },
-    buscarPorId: (req,res)=>{},
+    buscarPorId: (req,res)=>{
+        // 1: Capturar o id do filme
+        let id = req.params.id;
+
+        // 2: Importar o conteúdo de filmes.json para uma constante
+        const filmes = require('../database/filmes.json');
+
+        // 3: Definir a função filtradora
+        let filtradora = filme =>{
+            if(filme.id == id){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        // 4: Encontrar o filme que tem o id desejado 
+        const filme = filmes.find(filtradora);
+
+        // 5: Retornando a view de filme para o cliente
+        res.render('filme.ejs', {filme})
+    },
     buscarPorGenero: (req,res)=>{},
 }
 

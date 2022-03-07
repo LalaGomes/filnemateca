@@ -5,3 +5,8 @@
 ✔ No FilmesRouter.js, criar uma rota get para @done(22-03-05 13:58)
    '/busca'. Essa rota deve direcionar a requisição
    para FilmesController.buscar
+
+✔ Adequar o index.ejs @done(22-03-07 17:30)
+✔ Readequar a rota get @done(22-03-07 17:52)
+router.get('/filmes/:posicao', FilmesController.buscaPorPosicao)
+☐ Codar o controller buscaPorId.
