@@ -1,32 +1,28 @@
-// Importe o express
+// Importar a biblioteca express
 const express = require('express');
 
-// Criar o roteador com express.Router
+//Importar o Middleware;
+const middlewareGuardaBusca = require('../middlewares/middlewareGuardaBusca');
+
+// Importando o filmes controllers;
+const FilmesController = require('../controllers/FilmesController')
+    // Criar o roterador com express.Router
 const router = express.Router();
+//existe router no express por isso foi chamado com . .
+//criando as rotas do servidor 
 
-// Importando FilmesController
-const FilmesController = require('../controllers/FilmesController');
-
+//criação de rotas
 router.get('/', FilmesController.index);
-// listarFilmes
-//router.get('/filmes', FilmesController.listarFilmes);
-// genero
-/*router.get('/generos', FilmesController.genero);*/
-// função pelaPosicao
+router.get('/', FilmesController.listarFilmes);
+
+router.get('/buscargeneros/:trechoGeneros', FilmesController.buscarPorGenero);
+
 router.get('/filmes/:id', FilmesController.buscarPorId);
-// buscarPorTrecho
-router.get('/busca', FilmesController.buscarPorTrecho);
-// buscarPorId
-router.get('/buscaporid/:id', FilmesController.buscarPorId);
-// buscarPorGenero
-router.get('/generos/:genero', FilmesController.buscarPorGenero );
 
-// função listarFilmes
-// função pelaPosição
-// função buscarPorTrecho
-// função buscarPorId
-// função buscarPorGenero
+router.get('/buscar', middlewareGuardaBusca, FilmesController.buscarPorTrecho)
+
+router.get('/buscarid/:trechoId', FilmesController.buscarPorId);
 
 
-// Exportar o roteador
+//exportar o roteador
 module.exports = router;
